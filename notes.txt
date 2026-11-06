@@ -1,0 +1,38 @@
+ctrl + C: terminates everything
+ctrl + D: signals EOF
+
+Compiling:
+g++ -std=c++11 -o <exec name> <.cpp file>
+or better:
+g++ -std=c++17 -Wall -Wextra -pedantic <exec name> -o <.cpp file>
+
+To run:
+./<exec name>
+
+Initialise vector std::vector
+std::vector<int> vec_int{};
+std::vector<int> vec_int2 = {1,2,3};
+std::vector<double> vec_dbl = {1.2,3.4};
+std::vector<std::string> vec_str = {"msg1", "msg2"};
+
+Functions:
+size()- get size
+empty()- returns true or false if have zero elements
+push_back(<object>)- add object at end
+pop_back()- removes last object
+at(<index>) or[<index>]- access elemnt at index
+emplace_back(<args to construct object>)- creats object in place
+
+example of use:
+vec_dbl.pop_back()
+
+arguments:
+int main(int argc, char* argv[])
+{
+    const std::vector<std::string> cmdLineArgs { argv, argv+argc };
+}
+
+automated argument handler: boost::program_options
+#include <boost/program_options.hpp>
+namespace po = boost::program_options; (like import numpy as np)
+
